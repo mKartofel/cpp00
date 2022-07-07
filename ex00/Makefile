@@ -6,7 +6,7 @@
 #    By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/06 17:01:39 by vfiszbin          #+#    #+#              #
-#    Updated: 2022/07/06 17:08:12 by vfiszbin         ###   ########.fr        #
+#    Updated: 2022/07/07 08:45:37 by vfiszbin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,24 +16,20 @@ SRCS =	megaphone.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 
-INCLUDES =
-
 CC = c++
 
 RM = rm -f
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-LIBS =
-
-.cpp.o: ${INCLUDES}
+.cpp.o:
 	${CC} ${FLAGS} -c $ $< -o ${<:.cpp=.o}
 
 all: ${NAME}
 
 ${NAME} : ${OBJS}
 	
-	${CC} ${FLAGS} ${OBJS} -o ${NAME} ${LIBS}
+	${CC} ${FLAGS} ${OBJS} -o ${NAME}
 
 clean:
 	${RM} *.o
