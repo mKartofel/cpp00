@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:14:20 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/07 16:39:21 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/07/07 17:08:20 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 PhoneBook::PhoneBook(void)
 {
 	_index = -1;
+	_nbContacts = 0;
 	return ;
 }
 
@@ -29,6 +30,8 @@ void PhoneBook::addContact(void)
 	if (_index >= MAX_NB_CONTACT)
 		_index = 0;
 	_contacts[_index].fillContactInfos();
+	if (_nbContacts < MAX_NB_CONTACT)
+		_nbContacts++;
 }
 
 void PhoneBook::searchContact(void)
@@ -44,7 +47,7 @@ void PhoneBook::searchContact(void)
 	
 	//display all contacts infos
 	std::cout << "     index|first name| last name|  nickname" << std::endl;
-	for (int i = 0; i <= _index; i++)
+	for (int i = 0; i < _nbContacts; i++)
 	{
 		std::cout << std::setw(10) << i << "|"; //display current index
 		_contacts[i].displayShortContactInfo();
@@ -52,11 +55,11 @@ void PhoneBook::searchContact(void)
 	
 	//prompt user for index to search
 	indexInt = -1;
-	while (indexInt < 0 || indexInt > _index)
+	while (indexInt < 0 || indexInt >= _nbContacts)
 	{
 		std::cout << "Enter the index of the contact to display: ";
 		std::getline(std::cin, indexStr);
-		if (!arg_is_int(indexStr))
+		if (!arg_is_digit(indexStr) || !arg_is_int(indexStr))
 			std::cout << "You must type in an integer." << std::endl;
 		else
 			indexInt = ft_atoi(indexStr);

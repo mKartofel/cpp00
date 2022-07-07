@@ -6,7 +6,7 @@
 #    By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 08:38:45 by vfiszbin          #+#    #+#              #
-#    Updated: 2022/07/07 16:30:38 by vfiszbin         ###   ########.fr        #
+#    Updated: 2022/07/07 16:54:34 by vfiszbin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,12 +29,12 @@ RM = rm -f
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-.cpp.o: ${INCLUDES}
+.cpp.o:
 	${CC} ${FLAGS} -c $ $< -o ${<:.cpp=.o}
 
 all: ${NAME}
 
-${NAME} : ${OBJS}
+${NAME} : ${INCLUDES} ${OBJS}
 	
 	${CC} ${FLAGS} ${OBJS} -o ${NAME}
 
