@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 08:48:00 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/07 12:51:20 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:38:22 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ public:
 	~Contact(void);
 	
 	void fillContactInfos(void);
-	void displayShortContactInfo(void);
-	void displayFullContactInfo(void);
+	void displayShortContactInfo(void) const;
+	void displayFullContactInfo(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 11:14:20 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/07 17:08:20 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:39:01 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void PhoneBook::addContact(void)
 		_nbContacts++;
 }
 
-void PhoneBook::searchContact(void)
+void PhoneBook::searchContact(void) const
 {
 	std::string	indexStr;
 	int			indexInt;

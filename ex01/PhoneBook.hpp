@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 09:59:48 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/07 17:08:28 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:42:28 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PHONEBOOK_HPP
 # include "Contact.hpp"
 # include "utils.hpp"
-# define MAX_NB_CONTACT 2
+# define MAX_NB_CONTACT 8
 
 class PhoneBook
 {
@@ -27,7 +27,7 @@ public:
 	PhoneBook(void);
 	~PhoneBook(void);
 	void addContact(void);
-	void searchContact(void);
+	void searchContact(void) const;
 };
 
 

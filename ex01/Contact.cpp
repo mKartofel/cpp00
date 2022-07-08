@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 08:49:43 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/08 18:25:44 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:38:23 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,14 @@ std::string truncIfTooLong(std::string str)
 		return str.substr(0, 10);
 }
 
-void Contact::displayShortContactInfo(void)
+void Contact::displayShortContactInfo(void) const
 {
 	std::cout << std::setw(10) << truncIfTooLong(_firstName) << "|";
 	std::cout << std::setw(10) << truncIfTooLong(_lastName) << "|";
 	std::cout << std::setw(10) << truncIfTooLong(_nickname) << std::endl;
 }
 
-void Contact::displayFullContactInfo(void)
+void Contact::displayFullContactInfo(void) const
 {
 	std::cout << "first name: " << _firstName << std::endl;
 	std::cout << "last name: " << _lastName << std::endl;
