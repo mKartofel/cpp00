@@ -6,7 +6,7 @@
 #    By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 08:38:45 by vfiszbin          #+#    #+#              #
-#    Updated: 2022/07/07 16:54:34 by vfiszbin         ###   ########.fr        #
+#    Updated: 2022/07/08 19:03:15 by vfiszbin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ CC = c++
 
 RM = rm -f
 
-FLAGS = -Wall -Wextra -Werror -std=c++98 -g
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 .cpp.o:
 	${CC} ${FLAGS} -c $ $< -o ${<:.cpp=.o}
