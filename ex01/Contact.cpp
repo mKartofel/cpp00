@@ -6,7 +6,7 @@
 /*   By: vfiszbin <vfiszbin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/07 08:49:43 by vfiszbin          #+#    #+#             */
-/*   Updated: 2022/07/07 12:54:12 by vfiszbin         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:25:44 by vfiszbin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void Contact::fillContactInfos(void)
 std::string truncIfTooLong(std::string str)
 {
 	if (str.length() > 10)
-		return str.substr(0, 10) + ".";
+		return str.substr(0, 9) + ".";
 	else
 		return str.substr(0, 10);
 }
